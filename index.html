@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Epoxy Needs Calculator</title>
+</head>
+<style>
+    body {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sides {
+      width: 50%;
+      padding: 20px;
+      border: thin solid turquoise;
+    }
+    #epoxyResult, #ratioResult{
+        font-weight: bold;
+    }
+</style>
+<body>
+<div class="sides">
+  <h2>Dimensions Of Space for Casting</h2>
+  <img src="images/Dimensions.png" style="width: 200px; height:100px;">
+  <p>It is always recommended to mix a little more resin (in most cases 5-10%) as is in the epoxy result</p>
+  <p>
+    <b>Why?</b><br/>
+      Contraction or resin during hardening<br/>
+      inaccuracy in weighing (up to you)<br/>
+  </p>
+  <p>Please note that this formula caters for surfaces assumed even. for uneven surfaces, please indicate the average of the measured values</p>
+  <form id="volumeForm">
+    <label for="lengthInput">Length (cm):</label>
+    <input type="number" id="lengthInput" step="0.01" placeholder="Length" required><br>
+
+    <label for="widthInput">Width (cm):</label>
+    <input type="number" id="widthInput" step="0.01" placeholder="Width" required><br>
+
+    <label for="heightInput">Depth (cm):</label>
+    <input type="number" id="heightInput" step="0.01" placeholder="Depth" required><br>
+
+    <!-- <button type="submit">Calculate</button> -->
+  </form>
+
+  <div id="mainResult"></div>
+  <div id="result"></div>
+  <div id="epoxyResult"></div>
+</div>
+
+<div class="sides">
+  <h2>Calculation of Mass Mixing Ratio</h2>
+  <p>The table below is used to calculate the mixing ratio of epoxy resin and hardener. You can find the ratio on the resin label or on the specific product page</p>
+  <p>
+    To calculate simply enter the required weight of mixed resin and then the ratio of resin to hardener
+  </p>
+
+  <h3>Resin and Hardener Ratio Calculator </h3>
+  <form id="calculatorForm">
+    <label for="weightInput">Weight (Kg):</label>
+    <input type="number" id="weightInput" step="0.01" placeholder="Epoxy Weight" required><br>
+
+    <label for="resinRatioInput">Resin Ratio:</label>
+    <input type="number" id="resinRatioInput" step="0.01" placeholder="Resin Ratio" required><br>
+
+    <label for="hardenerRatioInput">Hardener Ratio:</label>
+    <input type="number" id="hardenerRatioInput" step="0.01" placeholder="Hardener Ratio" required><br>
+  </form>
+
+  <div id="ratioResult"></div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
