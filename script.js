@@ -14,9 +14,9 @@ const lengthInput = document.getElementById('lengthInput');
       const volumeWithExtra = volume * 1.1;
       const epoxyExtra = volumeWithExtra * 1.1;
 
-      mainResult.textContent = 'The volume is: ' + volume + ' Mg';
-      resultElement.textContent = 'The volume 10% extra is: ' + volumeWithExtra + ' Mg';
-      epoxyResult.textContent = 'The Needed weight for the Epoxy Mix is: ' + (epoxyExtra).toFixed(1) + ' Mg';
+      mainResult.textContent = 'The volume is: ' + volume + ' gramms';
+      resultElement.textContent = 'The volume 10% extra is: ' + volumeWithExtra + ' gramms';
+      epoxyResult.textContent = 'The Needed weight for the Epoxy Mix is: ' + (epoxyExtra).toFixed(1) + ' gramms';
     };
 
     lengthInput.addEventListener('input', calculateResult);
@@ -39,8 +39,8 @@ const calculateResultRatio = () => {
   const hardenerAmount = (weight * hardenerRatio) / (resinRatio + hardenerRatio);
 
   resultElementRatio.innerHTML = `
-    <p>Resin Weight: ${resinAmount.toFixed(2)} Mg</p>
-    <p>Hardener Weight: ${hardenerAmount.toFixed(2)} Mg</p>
+    <p>Resin Weight: ${resinAmount.toFixed(2)} gramms</p>
+    <p>Hardener Weight: ${hardenerAmount.toFixed(2)} gramms</p>
   `;
 };
 
